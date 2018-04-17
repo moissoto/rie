@@ -1,0 +1,136 @@
+<!DOCTYPE >
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+    integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script> 
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <title>Bienvenido</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+     	
+</head>
+ 
+<body>
+  <header class="container navbar-header"><!--Header -->
+        <nav class="navbar navbar-expand-lg bg-b fixed-top"><!-- Menu bar -->
+            <a class="navbar-brand" href="#">
+              <img src="imagenes/logo.jpg" class="align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  
+              </ul>            
+            </div>
+        </nav>
+    </header><!-- /header -->     
+	<div class="py-5"></div><div class="py-1"></div>
+
+    <div class="container">
+        <h1>Registro de Estadisticas</h1>
+    <form class="container" id="needs-validation" novalidate>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom01">Capacidad de alumnos</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Capacidad" value="" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom02">Capacidad de la Institucion</label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Capacidad" value="" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Poblacion Indigena</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="Poblacion" required>
+      <div class="invalid-feedback">
+        Ingresa datos
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom04">Indigenas
+       que hablan un solo idioma</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Idiomas" required>
+      <div class="invalid-feedback">
+        Ingresa datos
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom05">Lenguajes</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Lenguajes" required>
+      <div class="invalid-feedback">
+        Ingresa datos
+    </div>
+</div>
+    <div class="col-md-6 mb-6">
+      <label for="validationCustom05">Egresados</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Egresados" required>
+      <div class="invalid-feedback">
+        Ingresa datos
+    </div>
+</div>
+    <div class="col-md-6 mb-6">
+      <label for="validationCustom05">Edad</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Edad" required>
+      <div class="invalid-feedback">
+        Ingresa datos
+    </div>
+</div>
+    <div class="col-md-6 mb-6">
+      <label for="validationCustom05">Matricula</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Matricula" required>
+      <div class="invalid-feedback">
+        Ingresa datos
+    </div>
+</div>
+    <div class="col-md-6 mb-6">
+      <label for="validationCustom05">Alumnos de nuevo ingreso</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Nuevo ingreso" required>
+      <div class="invalid-feedback">
+        Ingresa datos
+    </div>
+  </div>
+<div class="clearfix">
+					<div class="pull-left text-muted text-vertical-align-button">
+						&nbsp;* Campos obligatorios
+					</div>
+					<div class="pull-right">
+						<button id="btnCancelar" name="btnCancelar" class="btn btn-default" type="button" >Cancelar</button>
+						<button id="btnGuardar" name="btnGuardar" class="btn btn-primary" type="submit">Guardar y Continuar</button>
+					</div>
+				</div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="js/bootstrap.min.js"></script>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+
+  window.addEventListener('load', function() {
+    var form = document.getElementById('needs-validation');
+    form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  }, false);
+})();
+</script>    
+        
+    </div>
+    <!-- JavaScript para las animaciones del menu -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

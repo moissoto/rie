@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>RIE - Estadisticas</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+    
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu {
+  width: 100%;
+  font-family: Raleway, sans-serif;
+  color: #ffffff;
+}
+#cssmenu ul ul {
+  display: none;
+}
+#cssmenu > ul > li.active > ul {
+  display: block;
+}
+.align-right {
+  float: right;
+}
+#cssmenu > ul > li > a {
+  padding: 16px 22px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #000000;
+  -webkit-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
+#cssmenu > ul > li > a:hover {
+  color: #fff;
+}
+#cssmenu ul > li.has-sub > a:after {
+  position: absolute;
+  right: 26px;
+  top: 19px;
+  z-index: 5;
+  display: block;
+  height: 10px;
+  width: 2px;
+  background: #ffffff;
+  content: "";
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+#cssmenu ul > li.has-sub > a:before {
+  position: absolute;
+  right: 22px;
+  top: 23px;
+  display: block;
+  width: 10px;
+  height: 2px;
+  background: #ffffff;
+  content: "";
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+#cssmenu ul > li.has-sub.open > a:after,
+#cssmenu ul > li.has-sub.open > a:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#cssmenu ul ul li a {
+  padding: 14px 22px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 14px;
+  text-decoration: none;
+  color: #dddddd;
+  background: #696969;
+  -webkit-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
+#cssmenu ul ul ul li a {
+  padding-left: 45px;
+  background: #707070;
+  color: #fff;
+}
+#cssmenu ul ul li a:hover {
+  color: #ffffff;
+}
+#cssmenu ul ul > li.has-sub > a:after {
+  top: 16px;
+  right: 26px;
+  background: #dddddd;
+}
+#cssmenu ul ul > li.has-sub > a:before {
+  top: 20px;
+  background: #dddddd;
+}
+#cssmenu ul ul ul ul li a {
+  padding-left: 60px;
+  background: #808080;
+}
+
+#cssmenu ul li a{
+  border-bottom: solid 0.5px #444; 
+}
+    </style>
+   
+    
+  </head>
+
+  <body>
+	  <header class="container navbar-header"><!--Header -->
+        <nav class="navbar navbar-expand-lg bg-b fixed-top"><!-- Menu bar -->
+            <a class="navbar-brand" href="index.html">
+              <img src="imagenes/logo.jpg"  class="align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a></li>                  
+                  <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-users"></i> Registrarse</a></li>
+                  <li class="nav-item"><a class="nav-link" data-toggle="modal" href="#logueo"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+              </ul>            
+            </div>
+        </nav>
+    </header><!-- /header -->
+
+    <!-- Ventana Modal -->
+    <div class="modal fade" id="logueo">
+      <div class="modal-dialog">
+        <div class="modal-content">       
+          <!-- Modal Header -->            
+          <div class="modal-header center">
+            <img id="profile-img" class="profile-img-card" src="user.png" style="border-radius: 50%;">
+          </div>          
+          <!-- Modal body -->
+          <div class="modal-body">
+              <form method="post" action='' name="login_form">
+          <div class="form-group">
+            <label for="email">Correo:</label>
+              <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                  </div>
+                  <input type="email" class="form-control" id="email" placeholder="email@example.com" required="">
+               </div>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Contraseña:</label>
+            <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                  </div>
+                  <input type="password" class="form-control" id="pwd" placeholder="Contraseña" required>
+               </div>
+          </div>
+          <div class="form-group">        
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Recordar Contraseña
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success" align='right'>Enviar</button>
+        </form>
+          </div>          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+          <button type="button" class="btn btn-danger"" data-dismiss="modal">Cerrar</button>          
+          </div>          
+        </div>
+      </div>
+    </div>
+
+    <div class="py-5"></div><div class="py-2"></div>
+    <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div id='cssmenu' class="row container">
+        <ul>
+           <li class='active has-sub'><a href='#'><i class="fas fa-chart-line"></i> Estadistica Descriptiva</a>
+              <ul>
+                 <li><a href='#' onclick="ver()"><i class="fas fa-address-book"></i> Estudiantes</a></li>
+                 <li><a href='#'><i class="fas fa-user"></i> Docentes</a></li>
+              </ul>
+           </li>
+           <li class='has-sub'><a href='#'><i class="fas fa-chart-area"></i> Indicadores  Educativos</a>
+              <ul>
+                 <li class='has-sub'><a href='#'><i class="fas fa-circle"></i> Area de Contexto</a>
+                    <ul>
+                      <li><a href='#'><i class="fas fa-chart-bar"></i> Densidad de Poblacion de Estudiantes</a></li>
+                      <li><a href='#'><i class="fas fa-chart-bar"></i> Instituciones educativas según su capacidad de atención</a></li>
+                      <li class='has-sub'><a href='#'><i class="fas fa-chart-bar"></i> Población indígena</a>
+                        <ul>
+                          <li><a href='#'><i class="fas fa-th-list"></i> Monolingües en la población indígena</a></li>
+                        </ul>
+                      </li>                
+                    </ul>
+                 </li>
+                 <li class='has-sub'><a href='#'><i class="fas fa-circle"></i> Area de Recursos</a>
+                    <ul>
+                      <li><a href='#'><i class="fas fa-hand-holding-usd"></i> Relación de inversión en educación con relación al PIB</a></li>
+                    </ul>
+                  </li>
+                 <li class='has-sub'><a href='#'><i class="fas fa-circle"></i> Area de procesos</a>
+                    <ul>
+                      <li class='has-sub'><a href='#'><i class="fas fa-chart-line"></i> Tasa de crecimiento de la matricula</a>
+                        <ul>
+                            <li ><a href='#'><i class="fas fa-check-circle"></i> Por tipo</a></li>
+                            <li ><a href='#'><i class="fas fa-check-circle"></i> Por nivel</a></li>
+                         </ul>
+                      </li>
+                      <li class='has-sub'><a href='#'><i class="fas fa-chart-pie"></i> Absorción</a>
+                         <ul>
+                            <li ><a href='#'><i class="fas fa-check-circle"></i> Por tipo</a></li>
+                            <li ><a href='#'><i class="fas fa-check-circle"></i> Por nivel</a></li>
+                         </ul>
+                        </li>
+                      <li><a href='#'><i class="fas fa-chart-pie"></i> Reprobación</a></li>
+                      <li><a href='#'><i class="fas fa-chart-pie"></i> Deserción total</a></li>
+                      <li><a href='#'><i class="fas fa-chart-pie"></i> Eficiencia terminal</a></li>
+                      <li><a href='#'><i class="fas fa-chart-line"></i> Tasa de escolarización por edad especifica</a></li>
+                    </ul>
+                 </li>
+                 <li class='has-sub'><a href='#'><i class="fas fa-circle"></i> Resultados</a>
+                    <ul>
+                        <li><a href='#'><i class="fas fa-graduation-cap"></i> Egresados</a></li>                  
+                    </ul>
+                 </li>
+                 <li class='has-sub'><a href='#'><i class="fas fa-circle"></i> Impacto</a>
+                    <ul>
+                        <li><a href='#'><i class="fas fa-list-alt"></i> Grado promedio de escolaridad</a></li>
+                        <li><a href='#'><i class="fas fa-list-alt"></i> Rezago Educativo</a></li>                  
+                    </ul>
+                 </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-8 col-md-offset-4"  ><!--col-md-offset-3 sirve para mover tantas columnas como se quiera -->  
+      <div id="texto"></div>
+      <canvas class="row col-xs-12 col-sm-12 col-md-12 clearfix visible-sm-block container-fluid" id="oilChart" style="height: 450px">
+      
+      </canvas>
+    </div>
+    
+  </div>
+
+
+  <script>
+      var oilCanvas = document.getElementById("oilChart");
+
+      Chart.defaults.global.defaultFontFamily = "Arial";
+      Chart.defaults.global.defaultFontSize = 17;
+
+      var oilData = {
+          labels: [
+              "Alvaro Obregon",
+              "Coyoacan",
+              "Iztapalapa",
+              "Cuajimalpa",
+              "Azcapotzalco"
+          ],
+          datasets: [
+              {
+                  data: [133.3, 86.2, 52.2, 51.2, 50.2],
+                  backgroundColor: [
+                      "#FF6384",
+                      "#63FF84",
+                      "#84FF63",
+                      "#8463FF",
+                      "#6384FF"
+                  ]
+              }]
+      };
+      function ver() {
+      var oilCanvas = document.getElementById("oilChart");
+      document.getElementById('texto').innerHTML='<h3 class="text-center">Delegaciones con mayor densidad de estudiantes</h3><br>';
+      Chart.defaults.global.defaultFontFamily = "Arial";
+      Chart.defaults.global.defaultFontSize = 17;
+
+      var oilData = {
+          labels: [
+              "Alvaro Obregon",
+              "Coyoacan",
+              "Iztapalapa",
+              "Cuajimalpa",
+              "Azcapotzalco"
+          ],
+          datasets: [
+              {
+                  data: [133.3, 86.2, 52.2, 51.2, 50.2],
+                  backgroundColor: [
+                      "#1E90FF",
+                      "#FFD700",
+                      "#84FF63",
+                      "#DC143C",
+                      "#7CFC00"
+                  ]
+              }]
+      };
+        var pieChart = new Chart(oilCanvas, {
+        type: 'pie',
+        data: oilData
+      });
+      }
+      
+    </script>
+    <!-- JavaScript para las animaciones del menu -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

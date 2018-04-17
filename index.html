@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>SISTEMA RIE-CDMX</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css"> 
+
+  </head>
+
+  <body>
+	  <header class="container navbar-header"><!--Header -->
+      	<nav class="navbar navbar-expand-lg bg-b fixed-top"><!-- Menu bar -->
+          	<a class="navbar-brand" href="#">
+            	<img src="imagenes/logo.jpg" class="align-top" alt="">
+          	</a>
+          	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            	<span class="fas fa-bars"></span>
+          	</button>
+          	<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            	<ul class="navbar-nav">
+                  <li class="nav-item activa"><a class="nav-link" href="#"><i class="fas fa-home"></i> Inicio</a></li>
+              		<li class="nav-item"><a class="nav-link" href="registro.html"><i class="fas fa-users"></i> Registrarse</a></li>
+              		<li class="nav-item"><a class="nav-link" data-toggle="modal" href="#logueo"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            	</ul>            
+          	</div>
+        </nav>
+    </header><!-- /header -->
+
+    <div class="py-5"></div><div class="py-1"></div>
+
+    <!-- Carrousel-->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+      </ul>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img1.jpg">
+        </div>
+        <div class="carousel-item">
+          <img src="img1.png">
+        </div>
+        <div class="carousel-item">
+          <img src="img5.jpg">
+        </div>
+        <div class="carousel-item">
+          <img src="img3.jpg">
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div><!-- Fin coarrousel-->
+
+    <!-- Ventana Modal -->
+  	<div class="modal fade" id="logueo">
+	    <div class="modal-dialog">
+	      <div class="modal-content">	      
+	        <!-- Modal Header -->            
+	        <div class="modal-header center">
+            <img id="profile-img" class="profile-img-card" src="user.png" style="border-radius: 50%;">
+	        </div>	        
+	        <!-- Modal body -->
+	        <div class="modal-body">
+	          	<form method="post" action='' name="login_form">
+      				  <div class="form-group">
+      				    <label for="email">Correo:</label>
+      				    	<div class="input-group mb-2">
+      					        <div class="input-group-prepend">
+      					          <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+      					        </div>
+      					        <input type="email" class="form-control" id="email" placeholder="email@example.com" required="">
+      					     </div>
+      				  </div>
+      				  <div class="form-group">
+      				    <label for="pwd">Contraseña:</label>
+      						<div class="input-group mb-2">
+      					        <div class="input-group-prepend">
+      					          <div class="input-group-text"><i class="fas fa-lock"></i></div>
+      					        </div>
+      					        <input type="password" class="form-control" id="pwd" placeholder="Contraseña" required>
+      					     </div>
+      				  </div>
+      				  <div class="form-group">		  	
+      					  <div class="form-check">
+      					    <label class="form-check-label">
+      					      <input class="form-check-input" type="checkbox"> Recordar Contraseña
+      					    </label>
+      					  </div>
+      				  </div>
+      				  <button type="submit" class="btn btn-success" align='right'>Enviar</button>
+				      </form>
+	        </div>	        
+	        <!-- Modal footer -->
+	        <div class="modal-footer">
+	        <button type="button" class="btn btn-danger"" data-dismiss="modal">Cerrar</button>          
+	        </div>	        
+	      </div>
+	    </div>
+	  </div>
+    <!-- Tarjetas de Informacion -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-5">
+                <div class="card">
+                    <a href="#"><img class="card-img-top" src="imagenes/foto1.jpg"></a>
+                    <div class="card-block">
+                        <h4 class="text-center">Instituciones Publicas</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-5">
+                <div class="card">
+                    <a href="#"><img class="card-img-top" src="imagenes/foto2.jpg"></a>
+                    <div class="card-block">
+                        <h4 class="text-center">Instituciones Privadas</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-5">
+                <div class="card">
+                    <a href="estadisticas.html"><img class="card-img-top" src="imagenes/foto3.jpg"></a>                    <div class="card-block">
+                        <h4 class="text-center">Estadisticas</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer>
+      <div class="container-fluid bg-secondary py-4 mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="row pie">
+                  <h5>Sistema de Registro de Instituciones Educativas</h5>
+              </div>
+            </div>
+          <div class="col-md-3 col-md-offset-4">
+            <div class="d-inline-block">
+              <div class="bg-circle-outline d-inline-block" >
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-2x fa-fw fab fa-facebook text-white"></i></a>
+              </div>
+                <div class="bg-circle-outline d-inline-block">                
+                  <a href="https://twitter.com/" target="_blank"><i class="fa fa-2x fa-fw fab fa-twitter text-white"></i></a>
+                </div>
+                <div class="bg-circle-outline d-inline-block">
+                  <a href="https://www.gmail.com/" target="_blank"><i class="fa fa-2x fa-fw far fa-envelope text-white"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- JavaScript para las animaciones del menu -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
